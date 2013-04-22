@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://twitter.github.com/bootstrap/examples/fluid.html -->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Contatta Gam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="./css/bootstrap.css" rel="stylesheet">
+<style type="text/css">
+body {
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 348px;
+    }
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+.well {
+    background-color: #282928;
+}
+
+</style>
+<link
+    href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css"
+    rel="stylesheet">
+<link href="./css/features.css" rel="stylesheet">
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<!-- Fav and touch icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+    href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+    href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+    href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+    href="http://twitter.github.com/bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon"
+    href="http://twitter.github.com/bootstrap/assets/ico/favicon.png">
+
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9iDZaZMFbrkvJNiPZNMCApn4d1Hrdms4&sensor=false">
+    </script>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./js/jquery.js"></script>
+    <script>
+      var geocoder;
+      var map;
+      function initialize() {
+        geocoder = new google.maps.Geocoder();
+        var mapOptions = {
+          zoom: 15,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        
+        var address = "Via Giovanni Villani, 75, Romma";
+        geocoder.geocode( { 'address': address}, function(results, status) {
+          if (status == google.maps.GeocoderStatus.OK) {
+            map.setCenter(results[0].geometry.location);
+            var marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location
+            });
+          } else {
+            alert("Geocode was not successful for the following reason: " + status);
+          }
+        });
+      }
+        
+    </script>
+    
+</head>
+
+<body  onload="initialize()" style="background-color: #313333">
+        
+    <img src="./img/call_head.png" alt="contattaci" class="header-img">
+
+    <div class="container-fluid">
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="default-Bootstrap.html">Home</a></li>
+                <li><a href="servizi.html#">Elenco Servizi </a></li>
+                <li><a href="default-Bootstrap.html">Elenco Progetti</a></li>
+                <li class="active"><a href="contattaci.html">Contattaci</a></li>
+                <li><a href="default-Bootstrap.html">Informazioni</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+        <!-- START THE FEATURETTES -->
+        <div class="row-fluid" style="margin-top: 30px;">
+            <div>
+                <div class="featurette">
+                    <div class="span5">
+                           <img class="featurette-image pull-left"
+                               src="./img/fattorino-dedicato4_5.png">
+                           <h2 class="featurette-heading">Contatti</h2>
+                           <p class="lead">Gam Servizi 2006 S.r.l.<br>
+    						Sede operativa: Via Giovanni Villani 75/77<br>
+    						00179    Roma<br>
+    						Tel. 06-45490737, Fax  06-45492085<br>
+    						email gam_service@fastwebnet.it<br>
+                           </p>
+    
+                    </div>
+                    <div class="span6">
+                        
+                        <div id="map-canvas" style="height: 340px; margin-bottom: 15px;border: 3px solid rgb(59, 59, 59);"></div>
+                    </div>
+                </div>
+                <!-- /END THE FEATURETTES -->
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+
+        <hr>
+
+        <!-- FOOTER -->
+        <footer>
+            <p class="pull-right">
+                <a href="servizi.html#">Back to top</a>
+            </p>
+            <p>
+                © 2012 Gam 2006, S.r.l. · <a href="default-Bootstrap.html#">Privacy</a>
+                · <a href="default-Bootstrap.html#">Terms</a>
+            </p>
+        </footer>
+
+    </div>
+    <!--/.fluid-container-->
+
+
+
+</body>
+</html>
