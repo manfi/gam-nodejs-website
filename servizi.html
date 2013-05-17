@@ -11,15 +11,14 @@
 
 <!-- Le styles -->
 <link href="./css/bootstrap.css" rel="stylesheet">
+<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+<link href="./css/features.css" rel="stylesheet">
 <style type="text/css">
 body {
     padding-top: 10px;
 	padding-bottom: 40px;
     background-color: rgb(40, 41, 40);
 }
-
-    /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
 
     /* Special class on .container surrounding .navbar, used for positioning it into place. */
     .navbar-wrapper {
@@ -28,18 +27,30 @@ body {
       left: 0;
       right: 0;
       z-index: 10;
-      margin-top: 234px;
+      margin-top: 236px;
     }
     /* Navbar links: increase padding for taller navbar */
     .navbar .nav > li > a {
       padding: 15px 20px;
     }
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
 
+    @media (max-width: 979px) {
+
+      .navbar-wrapper {
+        margin-top: 270px;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+}
 </style>
 <link
 	href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css"
 	rel="stylesheet">
-<link href="./css/features.css" rel="stylesheet">
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -64,7 +75,6 @@ body {
 		<img src="./img/servizi_head.png" alt="servizi" class="header-img">
 	</div>
 
-	<div class="container-fluid">
     <!-- NAVBAR
     ================================================== -->
     <div class="navbar-wrapper">
@@ -82,11 +92,11 @@ body {
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="default.html">Home</a></li>
+                <li><a href="default.htm">Home</a></li>
                 <li class="active"><a href="servizi.html#">Elenco Servizi </a></li>
-                <li><a href="default.html">Elenco Progetti</a></li>
+                <li><a href="default.htm">Elenco Progetti</a></li>
                 <li><a href="contattaci.html">Contattaci</a></li>
-                <li><a href="default.html">Informazioni</a></li>
+                <li><a href="default.htm">Informazioni</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -95,6 +105,7 @@ body {
       </div> <!-- /.container -->
     </div><!-- /.navbar-wrapper -->
 
+    <div class="container-fluid">
 
 		<!-- START THE FEATURETTES -->
 		<div class="row-fluid" style="margin-top: 30px;">
@@ -307,8 +318,8 @@ body {
 				<a href="servizi.html#">Back to top</a>
 			</p>
 			<p>
-				© 2012 Company, Inc. · <a href="default.html#">Privacy</a>
-				· <a href="default.html#">Terms</a>
+				© 2012 Company, Inc. · <a href="default.htm#">Privacy</a>
+				· <a href="default.htm#">Terms</a>
 			</p>
 		</footer>
 
