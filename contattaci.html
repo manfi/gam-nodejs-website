@@ -80,7 +80,7 @@ body {
         }
         map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
         
-        var address = "Via Giovanni Villani, 75, Romma";
+        var address = "Via Giovanni Villani, 75, Roma";
         geocoder.geocode( { 'address': address}, function(results, status) {
           if (status == google.maps.GeocoderStatus.OK) {
             map.setCenter(results[0].geometry.location);
@@ -120,11 +120,11 @@ body {
             <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
             <div class="nav-collapse collapse">
               <ul class="nav">
-                <li><a href="default-Bootstrap.html">Home</a></li>
+                <li><a href="default.html">Home</a></li>
                 <li><a href="servizi.html#">Elenco Servizi </a></li>
-                <li><a href="default-Bootstrap.html">Elenco Progetti</a></li>
+                <li><a href="default.html">Elenco Progetti</a></li>
                 <li class="active"><a href="contattaci.html">Contattaci</a></li>
-                <li><a href="default-Bootstrap.html">Informazioni</a></li>
+                <li><a href="default.html">Informazioni</a></li>
               </ul>
             </div><!--/.nav-collapse -->
           </div><!-- /.navbar-inner -->
@@ -173,8 +173,8 @@ body {
                 <a href="servizi.html#">Back to top</a>
             </p>
             <p>
-                © 2012 Gam 2006, S.r.l. · <a href="default-Bootstrap.html#">Privacy</a>
-                · <a href="default-Bootstrap.html#">Terms</a>
+                © 2012 Gam 2006, S.r.l. · <a href="default.html#">Privacy</a>
+                · <a href="default.html#">Terms</a>
             </p>
         </footer>
 
